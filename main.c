@@ -4,6 +4,8 @@
 int main(){
     int rowAndCol = 10;
     int mat[rowAndCol][rowAndCol];
+    // createMatrix(rowAndCol, &mat[0]);
+    // printMatrix(rowAndCol, &mat[0]);
     int num;
     int num1;
     int num2;

@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void creatMatrix(int n, int mat[][n]){
+void createMatrix(int n, int mat[][n]){
     for (int i=0; i < n; i++){
         for (int j=0; j < n; j++){
             mat[i][j] = 0;
@@ -52,7 +52,7 @@ void floydWarshallAlgo(int n, int mat[][n]){
     int tempMatNew[n][n];
 
     for (int k=0; k < n; k++){
-        creatMatrix(n, &tempMatNew[0]);
+        createMatrix(n, &tempMatNew[0]);
         firstStep(n ,&tempMatPrev[0], &tempMatNew[0], k);
         for (int i=0; i < n; i++){
             for (int j=0; j < n; j++){

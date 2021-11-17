@@ -1,0 +1,25 @@
+CC = gcc
+AR = ar
+FLAGS = -Wall -g
+
+all: matrixLib connections  
+
+connections: main.o my_matLib.so my_mat.h
+	$(CC) $(FLAGS) -o connections main.o ./my_matLib.so
+
+#static lib, none recursive
+matrixLib: my_matLib.so
+my_matLib.so: my_mat.o
+	$(CC) -shared -o my_matLib.so my_mat.o
+
+#compilize may_mat.c, static
+my_mat.o: my_mat.c
+	$(CC) $(FLAGS) -c my_mat.c 
+
+main.o: main.c my_mat.h
+	$(CC) -c main.c 
+
+.PHONY: clean all
+
+clean:
+	rm -f *.o *.a *.so connections matrixLib

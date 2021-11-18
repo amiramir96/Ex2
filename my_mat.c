@@ -9,15 +9,6 @@ void createMatrix(int n, int mat[][n]){
     }
 }
 
-void printMatrix(int n, int mat[][n]){
-    for (int i=0; i < n; i++){
-        for (int j=0; j < n; j++){
-            printf ("%d", mat[i][j]);
-        }
-        printf("\n");
-    } 
-}
-
 //does initilize the new mat to hold the values of row and col of the 'k' node of the graph
 void firstStep(int n, int prevMat[][n], int newMat[][n], int k){
     for (int i=0; i < n; i++){

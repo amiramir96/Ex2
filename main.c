@@ -19,10 +19,10 @@ int main(){
                 for (int j=0; j < rowAndCol; j++){
                     scanf("%d", &num);
                     if (i == j){
-                        mat[i][j] = 0;
+                        mat[j][i] = 0;
                     }
                     else {
-                        mat[i][j] = num;
+                        mat[j][i] = num;
                     }
                 }
             }

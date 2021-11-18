@@ -1,10 +1,12 @@
 #include<stdio.h>
 #include "my_mat.h"
 
+#define ROWANDCOL 10
+
 int main(){
 
-    int rowAndCol = 10; //define num of row and col 
-    int mat[rowAndCol][rowAndCol]; //matrix const
+//    int rowAndCol = 10; //define num of row and col 
+    int mat[ROWANDCOL][ROWANDCOL]; //matrix const
     
     //vars
     char letter; //for scanf input
@@ -15,8 +17,8 @@ int main(){
         scanf("%c", &letter);
         //case A
         if (letter == 'A'){
-            for (int i=0; i < rowAndCol; i++){ //edit matrix to the input val
-                for (int j=0; j < rowAndCol; j++){
+            for (int i=0; i < ROWANDCOL; i++){ //edit matrix to the input val
+                for (int j=0; j < ROWANDCOL; j++){
                     scanf("%d", &num);
                     if (i == j){
                         mat[i][j] = 0;
@@ -26,10 +28,7 @@ int main(){
                     }
                 }
             }
-            // printMatrix(rowAndCol, &mat[0]);
-            floydWarshallAlgo(rowAndCol, &mat[0]); //orginize matrix via floyd-marshall algorithm
-            // printf("\n");
-            // printMatrix(rowAndCol, &mat[0]);
+            floydWarshallAlgo(ROWANDCOL, &mat[0]); //orginize matrix via floyd-marshall algorithm
         }
         else if (letter == 'B'){ //case B - just get the cur location from the matrix and output the ans
             scanf("%d %d", &num1, &num2);

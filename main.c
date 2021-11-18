@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include "my_mat.h"
-
+// ivgeni instructions to use define if there is perm constants 
+// and in this assigment we work only with 10x10 matrix so our row and col constant is 10
 #define ROWANDCOL 10
 
 int main(){
 
-//    int rowAndCol = 10; //define num of row and col 
     int mat[ROWANDCOL][ROWANDCOL]; //matrix const
     
     //vars

@@ -19,14 +19,17 @@ int main(){
                 for (int j=0; j < rowAndCol; j++){
                     scanf("%d", &num);
                     if (i == j){
-                        mat[j][i] = 0;
+                        mat[i][j] = 0;
                     }
                     else {
-                        mat[j][i] = num;
+                        mat[i][j] = num;
                     }
                 }
             }
+            printMatrix(rowAndCol, &mat[0]);
             floydWarshallAlgo(rowAndCol, &mat[0]); //orginize matrix via floyd-marshall algorithm
+            printf("\n");
+            printMatrix(rowAndCol, &mat[0]);
         }
         else if (letter == 'B'){ //case B - just get the cur location from the matrix and output the ans
             scanf("%d %d", &num1, &num2);

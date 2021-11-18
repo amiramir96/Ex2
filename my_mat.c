@@ -44,10 +44,10 @@ void floydWarshallAlgo(int n, int mat[][n]){
                 if (tempMatNew[i][k] != 0 && tempMatNew[k][j] != 0 && tempMatNew[i][k] + tempMatNew[k][j] < tempMatPrev[i][j]){
                     tempMatNew[i][j] = tempMatNew[i][k] + tempMatNew[k][j];
                 }
-                else if (tempMatNew[i][k] != 0 && tempMatNew[k][j] != 0 && tempMatPrev[i][j] == 0) {
-                    tempMatNew[i][j] = tempMatNew[i][k] + tempMatNew[k][j];
+                // else if (tempMatNew[i][k] != 0 && tempMatNew[k][j] != 0 && tempMatPrev[i][j] == 0) {
+                //     tempMatNew[i][j] = tempMatNew[i][k] + tempMatNew[k][j];
 
-                }
+                // }
                 else {
                     tempMatNew[i][j] = tempMatPrev[i][j];
                 }

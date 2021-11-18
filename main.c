@@ -26,10 +26,10 @@ int main(){
                     }
                 }
             }
-            printMatrix(rowAndCol, &mat[0]);
+            // printMatrix(rowAndCol, &mat[0]);
             floydWarshallAlgo(rowAndCol, &mat[0]); //orginize matrix via floyd-marshall algorithm
-            printf("\n");
-            printMatrix(rowAndCol, &mat[0]);
+            // printf("\n");
+            // printMatrix(rowAndCol, &mat[0]);
         }
         else if (letter == 'B'){ //case B - just get the cur location from the matrix and output the ans
             scanf("%d %d", &num1, &num2);

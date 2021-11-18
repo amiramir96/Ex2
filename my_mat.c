@@ -41,8 +41,12 @@ void floydWarshallAlgo(int n, int mat[][n]){
             for (int j=0; j < n; j++){
                 //edit new value for a path between i to j IF and only IF the new suggested path is exists (no zero vals)
                 //and is smaller from prev path OR the prev valu is 0 (non exist path) - then any existing path is better!
-                if (tempMatNew[i][k] != 0 && tempMatNew[k][j] != 0 && (tempMatNew[i][k] + tempMatNew[k][j] < tempMatPrev[i][j] || tempMatPrev[i][j] == 0)){
+                if (tempMatNew[i][k] != 0 && tempMatNew[k][j] != 0 && tempMatNew[i][k] + tempMatNew[k][j] < tempMatPrev[i][j]){
                     tempMatNew[i][j] = tempMatNew[i][k] + tempMatNew[k][j];
+                }
+                else if (tempMatNew[i][k] != 0 && tempMatNew[k][j] != 0 && tempMatPrev[i][j] == 0) {
+                    tempMatNew[i][j] = tempMatNew[i][k] + tempMatNew[k][j];
+
                 }
                 else {
                     tempMatNew[i][j] = tempMatPrev[i][j];
